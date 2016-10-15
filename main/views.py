@@ -5,3 +5,6 @@ from . import templates
 
 def home_page(request):
 	return render(request, "home.html")
+
+def create_account(request):
+	return render(request, "create_account.html")
