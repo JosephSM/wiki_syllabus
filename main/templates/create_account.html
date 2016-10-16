@@ -1,10 +1,17 @@
+
 <!DOCTYPE html>
 <html>
 <head>
+{% block content %}
 	<title>OUrSite</title>
 </head>
 <body>
 <h1>Create account:</h1>
-
+	<form action = "{% url 'main:rrr' %}" method = 'post'>
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button name='submit'>Create account</button>
+	</form>
+{% endblock content %}
 </body>
 </html>
